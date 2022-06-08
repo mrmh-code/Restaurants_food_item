@@ -21,7 +21,7 @@ const MealDetails = () => {
             <h2>{strMeal}</h2>
             <h5>Area: {strArea}</h5>
             <p>{strInstructions}</p>
-            <Button href={strYoutube} className='btn btn-primary m-2'>Product Review</Button>
+            <Button href={strYoutube} className='btn btn-primary m-2'>Food Review</Button>
             <Link to={'/'} className='btn btn-success'>Back to Restaurants</Link>
         </div>
     );

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Meals from '../Meals/Meals';
-
+import './Restaurants.css'
 
 const Restaurants = () => {
     const [searchText,setSearchText]=useState('');
@@ -13,9 +13,9 @@ const Restaurants = () => {
     }, [searchText])
 
 
-    if(meals==null){
-        return <h2 className='mt-3'>Search result is not found...pls back</h2>;
-    }
+    // if(meals==null){
+    //     return <h2 className='mt-3'>Search result is not found...pls back</h2>;
+    // }
 
     
     const HandlerEvent=e =>{
@@ -30,7 +30,7 @@ const Restaurants = () => {
             <input onChange={HandlerEvent} className='m-2 w-25' type="text"  placeholder='Search Meals Here' />
             <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4 ">
             {
-              
+              meals==null?<h2 className='test'>Search result is not found...pls search food name</h2>:
                  meals.map(meal => <Meals
                  key={meal.idMeal}
                  meal={meal}
